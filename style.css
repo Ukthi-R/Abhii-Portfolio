@@ -107,8 +107,6 @@ section.home { text-align: center; }
   display: inline-block;
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #fff;
-  /* background-color: #0056d2; */
   color: whitesmoke;
   padding: 10px 20px;
   text-decoration: none;
