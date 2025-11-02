@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact | Abhishegarajan P</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Abhishegarajan P</div>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contact fade-in">
+    <h2>Contact Me</h2>
+    <form id="contact-form" class="contact-form">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <p id="form-status" class="status-message"></p>
+    <!-- <div class="contact-info">
+      <p>📞 +91 9344123356</p>
+      <p>✉️ abhishegarajanpalani@gmail.com</p>
+      <p>🔗 <a href="https://www.linkedin.com/in/abhishegarajanp">LinkedIn</a></p>
+    </div> -->
+  </section>
+
+    <!-- Contact info at bottom -->
+  <footer class="contact-footer">
+    <ul class="contact-list">
+      <li>
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+919344123356">+91 93441 23356</a>
+      </li>
+      <li>
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:abhishegarajanpalani@gmail.com">abhishegarajanpalani@gmail.com</a>
+      </li>
+      <li>
+        <i class="fa-brands fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/abhishegarajanp" target="_blank">LinkedIn</a>
+      </li>
+    </ul>
+  </footer>
+
+
+  <script src="script.js" defer></script>
+  <script src="email-script.js" defer></script>
+</body>
+</html>
+
+
+<!-- <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn - Ukthi">
+        <i class="fab fa-linkedin" style="font-size:28px;"></i>
+      </a> -->
