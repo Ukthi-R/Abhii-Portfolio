@@ -20,6 +20,7 @@ body {
 /* Navbar */
 .navbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   /* background-color: #ffffff; */
   background: linear-gradient(-45deg, #667eea, #764ba2, #6b8dd6, #8e37d7);
@@ -72,7 +73,7 @@ body {
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
-  user-select: none;
+  /* user-select: none; */
 }
 
 /* Theme button - removed */
