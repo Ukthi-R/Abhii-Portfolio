@@ -274,7 +274,7 @@ section.home { text-align: center; }
 
   .contact-footer {
     margin-top: 90px;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
   }
 
 }
