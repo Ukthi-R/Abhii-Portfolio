@@ -9,6 +9,11 @@ body {
   animation: gradientShift 10s ease infinite;
   color: whitesmoke;
   scroll-behavior: smooth;
+  /* Wrapper ensures footer stays at bottom even if content is short */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
 }
 
 @keyframes gradientShift {
@@ -73,7 +78,7 @@ body {
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
-  /* user-select: none; */
+  user-select: none;
 }
 
 /* Theme button - removed */
@@ -94,7 +99,9 @@ section.home { text-align: center; }
   transition: transform 0.3s ease;
 }
 
-.profile-pic:hover { transform: scale(1.05); }
+.profile-pic:hover { 
+  transform: scale(1.05); 
+}
 
 .btn {
   display: inline-block;
@@ -107,9 +114,12 @@ section.home { text-align: center; }
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.btn:hover { transform: translateY(-3px); opacity:0.95; }
+.btn:hover { 
+  transform: translateY(-3px); 
+  opacity:0.95; 
+}
 
-.about h2 {
+/* .about h2 {
   color: black;
 }
 
@@ -118,7 +128,7 @@ section.home { text-align: center; }
 }
 .projects h2 {
   color: black;
-}
+} */
 
 .skills-container {
   display: grid;
@@ -126,7 +136,11 @@ section.home { text-align: center; }
   gap: 1rem;
 }
 
-.project-list { display: grid; gap: 1rem; }
+.project-list { 
+  display: grid; 
+  gap: 1rem;
+
+}
 
 .project {
   padding: 1rem;
@@ -140,22 +154,36 @@ section.home { text-align: center; }
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
- .contact-form { display: flex; flex-direction: column; gap: 1rem; max-width: 500px; margin: 0 auto; }
+ .contact-form { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 1rem; 
+  max-width: 500px; 
+  margin: 0 auto; 
+}
 .contact-form input, .contact-form textarea {
-  padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem;
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 6px; 
+  font-size: 1rem;
 }
 
-.contact-info { margin-top: 2rem; text-align:center; } 
+.contact-info { 
+  margin-top: 2rem; 
+  text-align:center; 
+} 
 
 .contact-footer {
-  background: linear-gradient(-45deg, #667eea, #764ba2, #6b8dd6, #8e37d7);
+  /* background: linear-gradient(-45deg, #667eea, #764ba2, #6b8dd6, #8e37d7);
   background-size: 400% 400%;
-  animation: gradientShift 10s ease infinite;
+  animation: gradientShift 10s ease infinite; */
+  background: black;
   box-shadow: 0 2px 5px rgba(5, 5, 5, 0.1);
   color: #fff;
   padding: 10px 0;
   text-align: center;
-  margin-top: 75px;
+  width: 100%;
+  margin-top: 345px;
 }
 
 .contact-list {
@@ -163,6 +191,7 @@ section.home { text-align: center; }
   padding: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 40px;
   flex-wrap: wrap;
 }
@@ -181,11 +210,11 @@ section.home { text-align: center; }
 }
 
 .contact-list a:hover {
-  color: black; /* nice cyan hover */
+  color: white; /* nice cyan hover */
 }
 
 .contact-list i {
-  color: black;
+  color: white;
   font-size: 1.2rem;
 }
 
@@ -195,15 +224,59 @@ section.home { text-align: center; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }  */
 
 /* Navbar shrink effect */
-.navbar.shrink { padding: 0.5rem 3rem; box-shadow: 0 1px 4px rgba(0,0,0,0.08); background-color:#fff; }
+.navbar.shrink { 
+  padding: 0.5rem 3rem; 
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08); 
+  background-color:#fff; 
+}
 
 /* Responsive Menu */
 @media (max-width: 768px) {
-  .menu-toggle { display: block; }
-  .navbar ul { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; width: 100%; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; padding: 1rem 0; }
-  .navbar ul.show { display: flex; }
-  .navbar ul li { margin: 0.5rem 0; }
-  .profile-pic { width: 200px; }
+  .menu-toggle { 
+    display: block; 
+  }
+
+  .navbar ul { 
+    display: none; 
+    flex-direction: column; 
+    position: absolute; 
+    top: 60px; 
+    left: 0; 
+    width: 100%; 
+    background: linear-gradient(-45deg, #667eea, #764ba2, #6b8dd6, #8e37d7);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    text-align: center; 
+    padding: 1rem 0; 
+  }
+  
+  .navbar ul.show { 
+    display: flex; 
+  }
+
+  .navbar ul li { 
+    margin: 0.5rem 0; 
+  }
+
+  .profile-pic { 
+    width: 200px; 
+  }
+
+  .contact-list {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .contact-list li {
+    font-size: 0.95rem;
+  }
+
+  .contact-footer {
+    margin-top: 350px;
+    padding-bottom: 10px;
+  }
+
 }
 
 /* status messages */
@@ -212,7 +285,11 @@ section.home { text-align: center; }
 .status-message.error { color: red; }
 
 /* small helper to avoid horizontal scroll */
-html, body { width:100%; overflow-x:hidden; }
+html, body { 
+  height: 100%;
+  width:100%; 
+  overflow-x:hidden; 
+}
 
 
 /* CONTACT GLASS MORPHISM */
