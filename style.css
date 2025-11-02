@@ -183,7 +183,7 @@ section.home { text-align: center; }
   padding: 10px 0;
   text-align: center;
   width: 100%;
-  margin-top: 345px;
+  margin-top: 75px;
 }
 
 .contact-list {
@@ -273,7 +273,7 @@ section.home { text-align: center; }
   }
 
   .contact-footer {
-    margin-top: 350px;
+    margin-top: 80px;
     padding-bottom: 10px;
   }
 
@@ -286,7 +286,7 @@ section.home { text-align: center; }
 
 /* small helper to avoid horizontal scroll */
 html, body { 
-  height: 100%;
+  /* height: 100%; */
   width:100%; 
   overflow-x:hidden; 
 }
